@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+/* General settings*/
 * {
   margin: 0;
   padding: 0;
@@ -22,18 +23,15 @@ body {
   justify-content: center;
 }
 
-/* LAYOUT */
+/* Layout settings*/
 main {
-  /* position: relative; */
   width: 100vw;
   height: 55rem;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  /* border-radius: 9px; */
   overflow: hidden;
-  /* display: flex; */
   display: grid;
   grid-template-rows: repeat(3, 1fr);
 }
@@ -81,35 +79,23 @@ main {
   width: 40%;
   height: 80%;
   margin: 0 auto 10px;
-  /* padding: 2rem; */
-  /* text-align: center; */
   transition: all 0.75s;
 }
-/* .player {
-  flex: 50%;
-  padding: 9rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.75s;
-} */
 
-/* ELEMENTS */
+/* Elements*/
 .name {
-  /* position: relative; */
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 280;
-  /* margin-bottom: 1rem; */
+  color: rgb(10, 10, 10);
 }
 
 .score {
   font-size: 4rem;
   font-weight: 300;
   color: #f20346;
-  /* margin-bottom: auto;*/
 }
 
 .player--active {
@@ -128,7 +114,6 @@ main {
 
 .current-label {
   text-transform: uppercase;
-  /* margin-bottom: 1rem; */
   font-size: 1.7rem;
   color: #101010;
 }
@@ -137,11 +122,7 @@ main {
   font-size: 3rem;
 }
 
-/* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
-  /* position: absolute;
-  left: 50%;
-  transform: translateX(-50%); */
   color: black;
   background: none;
   border: none;
@@ -159,22 +140,6 @@ main {
   z-index: 999;
 }
 
-/* .btn::first-letter {
-  font-size: 2.4rem; */
-/* display: inline-block; */
-/* margin-right: 0.7rem;
-} */
-
-/* .btn--new {
-  top: 4rem;
-}
-.btn--roll {
-  top: 39.3rem;
-}
-.btn--hold {
-  top: 46.1rem;
-} */
-
 .btn:active {
   transform: translateY(50%, 3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
@@ -185,10 +150,6 @@ main {
 }
 
 .dice {
-  /* position: absolute;
-  left: 50%;
-  top: 16.5rem;*/
-  /* transform: translateX(-50%); */
   height: 10rem;
   width: 10rem;
   box-shadow: 0 2rem 5rem rgba(23, 22, 22, 0.2);
@@ -208,7 +169,7 @@ main {
   display: none;
 }
 
-/* Media query section starts*/
+/* Media query settings */
 /* Below 1200px (Landscape Tablets) */
 @media (max-width: 1200px) {
   .total {

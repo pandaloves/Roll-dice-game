@@ -32,6 +32,9 @@ const init = function () {
   player1.classList.remove('player--winner');
   player0.classList.add('player--active');
   player1.classList.remove('player--active');
+  alert(
+    'Welcome! HOLD means keeping scores. The first one reaching 30 wins. Good luck! 😀'
+  );
 };
 init();
 
@@ -67,7 +70,7 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    if (scores[activePlayer] >= 80) {
+    if (scores[activePlayer] >= 30) {
       playing = false;
       dice.classList.add('hidden');
 
@@ -77,6 +80,7 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
+      alert('👍You won! 🎉Congratulations!');
     } else {
       switchPlayer();
     }
